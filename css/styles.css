@@ -683,7 +683,11 @@ footer {
     width: 100%;
     background: rgba(0, 0, 0, 0.2);
     transition-property: opacity;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal-form {
+    transform: translate(-50%);
 }
 
 .modal-form {
@@ -699,6 +703,7 @@ footer {
     background-color    : #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-title {
@@ -846,10 +851,18 @@ footer {
 }
 
 .condition {
+    /* display: block; */
     color: var(--accent-color);
     /* border-bottom: 1px solid var(--accent-color); */
     text-decoration: underline;
 }
+
+/* .condition::after {
+    display: block;
+    height: 10px;
+    width: 10px;
+    border: 1px solid black;
+} */
 
 .close-button {
     position: absolute;
