@@ -794,7 +794,9 @@ footer {
     border-radius: 4px;
 }
 
-.modal-form-input:focus + .modal-form-label {
+
+.modal-form-input:focus + .modal-form-label,
+.modal-form-input:not(:placeholder-shown) + .modal-form-label {
     transform: translate(-32px, -36px);
     color: var(--accent-color);
 }
